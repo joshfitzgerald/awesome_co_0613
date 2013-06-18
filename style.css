@@ -64,6 +64,7 @@ body {
 #content {
 	width:700px;
 	float:left;
+	word-wrap:break-word;
 }
 .page #content {
 	width:640px;
@@ -72,7 +73,8 @@ body {
 	width:100%;
 	float:none;
 }
-.page-template-no-sidebar-php  #content,
+/* this is the body class of a page with our no-sidebar template */
+.page-template-template-no-sidebar-php #content,
 .page-template-template-sitemap-php #content {
 	width:auto;
 	float:none;
@@ -1053,4 +1055,16 @@ sup {
 }
 sub {
 	vertical-align:sub;
+}
+
+/*
+RSS Feed Image 
+ */
+.page-template-template-sitemap-php #content img{
+	margin:0;
+	padding:0;
+	border:none;
+	display:inline;
+	background: transparent;
+	vertical-align: bottom;
 }
