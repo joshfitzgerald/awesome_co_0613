@@ -48,7 +48,7 @@
 
 			<ul class="utilities">
 				<?php wp_list_pages( array(
-					'title_li'	=> ''
+					'title_li'	=> '',
 					'include'=> 2, 146
 					)); ?>
 				</ul>
@@ -56,7 +56,7 @@
 				<nav>
 					<ul>
 						<?php wp_list_pages(array(
-							'title_li'	=> ''
+							'title_li'	=> '',
 							'exclude'=> 2, 146
 							)); ?>
 					</ul>
