@@ -62,3 +62,10 @@
 					</ul>
 				</nav>
 		</header>    <!-- end header -->
+
+<?php 
+//only do the breadcrumb if the function exists
+if(function_exists('dimox_breadcrumbs')):
+	dimox_breadcrumbs(); 
+endif; 
+?>
