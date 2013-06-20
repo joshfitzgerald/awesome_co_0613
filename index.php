@@ -26,13 +26,7 @@
 
             <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'thumb' ) ); ?>                    
             <div class="entry-content">
-                <?php 
-                //if viewing a single post or page, show full content. otherwise, use shortened excerpts
-                if( is_singular() ):
-                	the_content();
-                else:
-                	the_excerpt(); //first 55 words of the post or custom excerpt
-                endif; ?>
+                <?php mmc_smart_content(); //from functions.php ?>
             </div>
        
         

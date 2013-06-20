@@ -31,6 +31,33 @@ function mmc_read_more(){
 }
 add_filter( 'excerpt_more', 'mmc_read_more' );
 
+/**
+ * Make User Experience better when replying to comments
+ * the comment form will move to the post you are replying to
+ * @since ver. 0.1
+ */
+add_action( 'wp_print_scripts', 'mmc_comment_reply' );
+function mmc_comment_reply(){
+	//make sure we are on a page that needs the comment-reply script
+	if( !is_admin() AND is_singular() AND comments_open() AND 
+		get_option('thread_comments') ):
+
+		wp_enqueue_script( 'comment-reply' );
+	endif;
+}
+
+/**
+ * Helper function for showing full content on singular views 
+ * and short content on all other views
+ * @since ver. 0.1
+ */
+function mmc_smart_content(){
+	if( is_singular() ):
+		the_content();
+	else:
+		the_excerpt(); //first few words of the post or custom excerpt
+	endif;
+}
 
 
 /**

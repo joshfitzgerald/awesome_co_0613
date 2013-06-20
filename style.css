@@ -699,8 +699,9 @@ footer#colophon .widget ul li {
 	margin:0 0 10px 0;
 }
 .onethird {
-	width:33%;
+	width:32%;
 	float:left;
+	margin-right:1%;
 }
 .twothirds {
 	width:66%;
