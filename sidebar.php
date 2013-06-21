@@ -1,4 +1,6 @@
  <aside id="sidebar">
+    <?php //show the blog sidebar widget area if it has widgets. otherwise, do some fallback content
+    if( ! dynamic_sidebar( 'blog-sidebar' ) ): ?>
         <section id="categories" class="widget">
             <h3 class="widget-title"> Categories </h3>
             <ul>
@@ -22,8 +24,7 @@
         </section>
         <section id="tags" class="widget">
             <h3 class="widget-title"> Tags </h3>
-            <?php wp_tag_cloud(); ?>
-            
+            <?php wp_tag_cloud(); ?>   
         </section>
         <section id="meta" class="widget">
             <h3 class="widget-title"> Meta </h3>
@@ -32,4 +33,5 @@
                 <li> <?php wp_loginout(); ?> </li>
             </ul>
         </section>
+    <?php endif; //dynamic sidebar fallback ?>
   </aside><!-- end sidebar --> 

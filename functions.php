@@ -79,6 +79,50 @@ function mmc_setup_menus(){
 }
 
 /**
+ * Set Up Widget Areas (Dynamic Sidebars)
+ * @since ver. 0.1
+ */
+add_action( 'widgets_init', 'mmc_register_sidebars' );
+function mmc_register_sidebars(){
+	register_sidebar( array(
+		'name'			=> 'Blog Sidebar',
+		'id'			=> 'blog-sidebar',
+		'description' 	=> 'These widgets will appear on all blog and archive views',
+		'before_widget' => '<section id="%1$s" class="widget cf %2$s">',
+		'after_widget' 	=> '</section>',
+		'before_title'	=> '<h3>',
+		'after_title'	=> '</h3>',
+		) );
+	register_sidebar( array(
+		'name'			=> 'Home Area',
+		'id'			=> 'home-area',
+		'description' 	=> 'These Widgets show up near the bottom of the home page',
+		'before_widget' => '<section id="%1$s" class="widget cf %2$s">',
+		'after_widget' 	=> '</section>',
+		'before_title'	=> '<h3>',
+		'after_title'	=> '</h3>',
+		) );
+	register_sidebar( array(
+		'name'			=> 'Page Sidebar',
+		'id'			=> 'page-sidebar',
+		'description' 	=> 'These widgets will appear on all pages that have a sidebar',
+		'before_widget' => '<section id="%1$s" class="widget cf %2$s">',
+		'after_widget' 	=> '</section>',
+		'before_title'	=> '<h3>',
+		'after_title'	=> '</h3>',
+		) );
+	register_sidebar( array(
+		'name'			=> 'Footer Area',
+		'id'			=> 'footer-area',
+		'description' 	=> 'appears on the bottom of every view',
+		'before_widget' => '<section id="%1$s" class="widget cf %2$s">',
+		'after_widget' 	=> '</section>',
+		'before_title'	=> '<h3>',
+		'after_title'	=> '</h3>',
+		) );
+}//end mmc_register_sidebars
+
+/**
  * Dimox Breadcrumbs
  * http://dimox.net/wordpress-breadcrumbs-without-a-plugin/
  * Since ver 0.1

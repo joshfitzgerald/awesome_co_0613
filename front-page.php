@@ -29,5 +29,5 @@
 
 </div><!-- end content -->
 
-<?php get_sidebar(); ?> 
+<?php get_sidebar( 'frontpage' ); //loads sidebar-frontpage.php ?> 
 <?php get_footer(); ?>  
