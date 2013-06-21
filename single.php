@@ -39,15 +39,9 @@
 	  <?php endif; //END OF LOOP. ?>
 	          
         
-        <div id="nav-below" class="pagination">
-        <?php //run the pagenavi function if it exists
-        if( function_exists('wp_pagenavi') ):
-            wp_pagenavi(); 
-        else:
-            //do the normal pagination if the plugin is missing
-            next_posts_link( '&laquo; Older Posts' ); 
-            previous_posts_link( 'Newer Posts &raquo;' );  
-        endif; ?>
+        <div id="nav-below" class="pagination"> 
+            <?php previous_post_link();  //older post?>
+            <?php next_post_link(); //newer post?>          
         </div><!-- end #nav-below --> 
         
     </div><!-- end content -->

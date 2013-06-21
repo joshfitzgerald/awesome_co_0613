@@ -54,11 +54,29 @@ function mmc_comment_reply(){
 function mmc_smart_content(){
 	if( is_singular() ):
 		the_content();
+		wp_link_pages( array(
+			'before' => '<div class="pagination">This post has more pages: ',
+			'after'=> '</div>',
+			'next_or_number' => 'next',
+			'nextpagelink' => 'Keep Reading',
+			) );
 	else:
 		the_excerpt(); //first few words of the post or custom excerpt
 	endif;
 }
 
+/**
+ * Set up all the Navigation Menu Areas the site needs
+ * @since ver 0.1
+ */
+add_action( 'init', 'mmc_setup_menus' );
+function mmc_setup_menus(){
+	register_nav_menus( array(
+			'main_menu' => 'Main Navigation Bar',
+			'utilities' => 'Utility Area',
+			'footer_menu' => 'Footer Menu Area',
+ 		) );
+}
 
 /**
  * Dimox Breadcrumbs
