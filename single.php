@@ -30,7 +30,7 @@
             </div>
        
         
-		<?php comments_template(); ?>
+		<?php comments_template(); //includes comments.php ?>
 		 </article><!-- end post -->
       <?php 
 	  endwhile;
