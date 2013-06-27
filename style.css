@@ -1176,3 +1176,14 @@ body.single-product .post-meta span{
 	margin-bottom:6px;
 	font-size:.875em;
 }
+.post-type-archive-product .entry-content,
+.single-product .entry-content,
+.tax-brand .entry-content,
+.tax-feature .entry-content{
+	margin-left:0;
+}
+.post-type-archive-product .thumb,
+.tax-brand .thumb,
+.tax-feature .thumb{
+	float:none;
+}

@@ -17,6 +17,7 @@
                                
             <div class="entry-content">
                 <?php the_meta(); ?>
+                <?php the_terms( $post->ID, 'brand', '<p>Brand: ', ', ', '</p>' ); ?>
                 <?php mmc_smart_content(); //from functions.php ?>
             </div>       
         

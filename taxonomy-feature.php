@@ -5,7 +5,7 @@
 	//THE LOOP.
 	if( have_posts() ):  ?>
 
-<h2 class="archive-title"><?php post_type_archive_title(); ?></h2>
+<h2 class="archive-title">All Products featuring <?php single_cat_title(); ?></h2>
 
     <?php
 		while( have_posts() ):
@@ -48,5 +48,5 @@
         
     </div><!-- end content -->
     
-<?php get_sidebar(); ?> 
+<?php get_sidebar('shop');  //includes sidebar-shop.php ?> 
 <?php get_footer(); ?>  
